@@ -1,0 +1,11 @@
+{
+  "name": "custom-radiobutton",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ofir fridman",
+  "license": "MIT"
+}
