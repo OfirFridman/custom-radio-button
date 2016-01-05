@@ -1,14 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="custom-radio-button">
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
+
+    <link rel="stylesheet" href="css/custom-radio-button.css"/>
 </head>
 <body>
 
-<script src="../bower_components/angular/angular.min.js"></script>
+<div>
+    <input name="demo" type="radio" id="radio1" custom-radio-button checked/>
+    <input name="demo" type="radio" id="radio2" custom-radio-button/>
+</div>
+
+<div>
+
+</div>
+
+
+<script src="../bower_components/angular/angular.js"></script>
 <script src="app.js"></script>
-<script src="custom-radio-button/component/customRadioButtonComponent.js"></script>
+<script src="component/customRadioButtonComponent.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,43 @@
+$white-color: white;
+$border-color: #537ac2;
+$hover-border-color: #110079;
+
+@mixin radio-button-label($background-color: $white-color, $display: inline-block) {
+  background-color: $background-color;
+  display: $display;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+@mixin border($border-color: $border-color) {
+  border: 1px solid $border-color;
+}
+
+input[type="radio"][custom-radio-button] {
+  display: none;
+
+  + label {
+    @include radio-button-label;
+    @include border;
+
+    transition: border 0.35s ease-out;
+    cursor: pointer;
+
+    &:hover {
+      @include border($hover-border-color);
+    }
+  }
+
+  &:checked + label {
+    @include border;
+    cursor: auto;
+  }
+
+  &:checked + label::after {
+    @include radio-button-label($hover-border-color, block);
+
+    content: '';
+    transform: scale(0.5);
+  }
+}
